@@ -20,3 +20,17 @@ tableData.forEach(function(ufos){
 		cell.text(value);
 		});
 });
+
+// button select
+var button = d3.select("#filter-btn");
+button.on("click", function(){
+
+	tableBody.html("");
+
+	// selecting date and value properties
+	var inputDate = d3.select("#datetime");
+
+	var inputVal = inputDate.property("value");
+	// console log it
+	console.log(inputValue);
+});
