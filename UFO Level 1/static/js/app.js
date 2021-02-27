@@ -32,5 +32,23 @@ button.on("click", function(){
 
 	var inputVal = inputDate.property("value");
 	// console log it
-	console.log(inputValue);
+	console.log(inputVal);
+
+	// filter the data
+	var filtered = tableData.filter(event => event.datetime === inputVal);
+
+	// console log it
+	console.log(filtered);
+
+	// appending new info based on selected date
+	filtered.forEach(function(selections){
+		var nRow = tableBody.append("tr");
+
+		Object.entries(selections).forEach(function([key, value]){
+			console.log(key, value);
+
+			var cell = nRow.append("td");
+			cell.text(value);
+		});
+	});
 });
