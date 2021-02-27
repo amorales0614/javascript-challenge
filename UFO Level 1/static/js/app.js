@@ -12,6 +12,11 @@ tableData.forEach(function(ufos){
 	// appending new row for each sighting
 	var nRow = tableBody.append("tr");
 
-	
+	Object.entries(ufos).forEach(
+		function([key, value]) {
+		console.log(key, value);
 
+		var cell = nRow.append("td");
+		cell.text(value);
+		});
 });
